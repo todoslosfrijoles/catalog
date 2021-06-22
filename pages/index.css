@@ -1,37 +1,72 @@
-@import './normalize.css';
-body {
-    background-color: #e5e5e5;
-}
+@import '../vendor/normalize.css';
+@import '../vendor/fonts.css';
+@import '../blocks/root/root.css';
+@import '../images/Logo.png';
+@import '../images/image\ 1.jpg';
+@import '../images/Favicon.png';
+
 .header {
     display: flex;
     justify-content: space-between;
+    padding-right: 120px;
+    padding-left: 120px;
+    padding-bottom: 10px;
 }
 
-.title {
-    padding-left: 120px;
-    margin-top: 80px;
-    font-size: 40px;
+.logo {
+    width: 98.56px;
+    height: 65.29px;
+    padding-top: 11.22px;
 }
 
 .button {
     font-size: 16px;
     text-align: center;
     border-radius: 12px;
-    height: 48px;
-    width: 198px;
-    margin-top: 80px;
-    margin-right: 120px;
+    height: 40px;
+    width: 182px;
+    margin-top: 24px;
     background-color: rgba(0,0,0,0.04);
-    border-width: 0;
+    border-width: 2px;
+    border-color: #FF9E1F;
+    border-style: solid;
+    background-color: white;
 }
 
 .section {
-    background-color:gray;
-    padding-left: 120px;
+    background-color:white;
     padding-right: 120px;
+    padding-left: 120px;
+    padding-top: 20px;
     height: 100vh;
 }
 
 .card {
-    
+    width: 262px;
+    height: min-content;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 18px;
+    padding: 8px 8px 38px 8px;
+    list-style: none;
+}
+
+.card__image {
+    width: 262px;
+    height: 256px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 18px;
+    display: inline-grid;
+}
+
+.card__title {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.card__text {
+    font-size: 14px;
+    font-weight: 400;
 }
