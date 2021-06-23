@@ -4,13 +4,19 @@
 @import '../images/Logo.png';
 @import '../images/image\ 1.jpg';
 @import '../images/Favicon.png';
+@import '../images/image\ 2.jpg';
+@import '../images/Vector.svg';
+@import '../images/Heart.svg';
+@import '../images/image\ 3.jpg';
+@import '../images/image\ 4.jpg;';
 
 .header {
     display: flex;
     justify-content: space-between;
-    padding-right: 120px;
-    padding-left: 120px;
     padding-bottom: 10px;
+    position: sticky;
+    top: 0;
+    background-color: white;
 }
 
 .logo {
@@ -33,12 +39,22 @@
     background-color: white;
 }
 
+.button:active {
+    background-color: #e5e5e5;
+}
+
 .section {
     background-color:white;
-    padding-right: 120px;
-    padding-left: 120px;
     padding-top: 20px;
-    height: 100vh;
+    height: 100%;
+    /*display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 16px;*/
+    padding-left: 0;
+    padding-right: 0;
+    column-count: 4;
+    column-width: 278px;
 }
 
 .card {
@@ -48,8 +64,11 @@
     border-width: 2px;
     border-style: solid;
     border-radius: 18px;
-    padding: 8px 8px 38px 8px;
+    padding: 8px 8px 14.7px 8px;
     list-style: none;
+    justify-self: center;
+    break-inside: avoid;
+    margin-bottom: 16px;
 }
 
 .card__image {
@@ -61,6 +80,10 @@
     display: inline-grid;
 }
 
+.card__block {
+    display:flex;
+    flex-direction: column;
+}
 .card__title {
     font-size: 16px;
     font-weight: 700;
@@ -69,4 +92,22 @@
 .card__text {
     font-size: 14px;
     font-weight: 400;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.card__button {
+    background-image: url(../images/Vector.svg);
+    width: 20px;
+    height: 17.29px;
+    background-repeat: no-repeat;
+    border-width: 0;
+    background-color: white;
+    align-self: flex-end;
+}
+
+.card__button:active,
+.card__button:focus {
+    background-image: url(../images/Heart.svg);
+    background-position: center;
 }
