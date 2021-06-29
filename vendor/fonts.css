@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'VisueltPro';
+    font-style: normal;
+    font-weight: 400;
+    src: url(./fonts/VisueltPro-Regular.woff) format('woff'),
+    url(./fonts/VisueltPro-Regular.woff2) format('woff2');
+  }
+  
+  @font-face {
+    font-family: 'VisueltPro';
+    font-style: normal;
+    font-weight: 500;
+    src: url(./fonts/VisueltPro-Medium.woff) format('woff'),
+    url(./fonts/VisueltPro-Medium.woff2) format('woff2');
+  }
+  
+  @font-face {
+    font-family: 'VisueltPro';
+    font-style: normal;
+    font-weight: 900;
+    src: url(./fonts/VisueltPro-Bold.woff) format('woff'),
+    url(./fonts/VisueltPro-Bold.woff2) format('woff2');
+  }
