@@ -13,7 +13,7 @@
         <header class="header">
             <div class="header__block">
                 <img class="logo" src="./images/Logo.png" alt="Logo">
-                <button class="button">Добавить комикс</button>
+                <button class="add-button">Добавить комикс</button>
             </div>
             <nav class="nav noselect">
                 <ul class="nav__bar">
@@ -108,10 +108,13 @@
                     <button class="popup__button_close"></button>
                 </div>
                 <div class="popup__content_body">
-                    <input class="popup__input">
-                    <input class="popup__input">
-                    <input class="popup__input">
-                    <button class="popup__button_post">Добавить</button>
+                    <img class="popup__link" src="images/link.svg">
+                    <form class="popup__form">
+                        <input placeholder="Ссылка на обложку" type="url" class="popup__input popup__url">
+                        <input placeholder="Заголовок" class="popup__input">
+                        <input placeholder="Описание комикса" class="popup__input">
+                        <button class="popup__button_post">Добавить</button>
+                    </form>
                 </div>
             </div>
         </div>

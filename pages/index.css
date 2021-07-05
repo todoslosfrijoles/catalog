@@ -10,6 +10,17 @@
 @import '../images/image3.jpg';
 @import '../images/image4.jpg;';
 @import '../images/cross.svg';
+@import '../images/link.svg';
+
+@keyframes popup {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes popup_close {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
 
 .noselect {
     -webkit-touch-callout: none; /* iOS Safari */
@@ -40,7 +51,7 @@
     padding-top: 11.22px;
 }
 
-.button {
+.add-button {
     font-size: 16px;
     text-align: center;
     border-radius: 12px;
@@ -165,10 +176,18 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
+    /* animation-name: popup_close;
+    animation-duration: 0.5s; */
 }
+
+/* .popup_open {
+    display: flex;
+    animation-name: popup;
+    animation-duration: 0.5s;
+} */
 
 .popup__content {
     width: 544px;
@@ -187,13 +206,14 @@
     justify-content: space-between;
     width: 100%;
     align-items: center;
-
+    margin-bottom: 12px;
 }
 
 .popup__content_title {
     padding: 0;
     margin: 0;
     font-size: 24px;
+    font-weight: 500px;
 }
 
 .popup__button_close {
@@ -210,15 +230,37 @@
     flex-direction: column;
 }
 
+.popup__link {
+    position: absolute;
+    margin-left: 17px;
+    margin-top: 31px;
+}
+
+.popup__form {
+    display: flex;
+    flex-direction: column;
+}
+
 .popup__input {
     padding: 18px 344px 18px 44px;
+    margin-top: 12px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #EBEAED;
+    border-width: 1px;
 }
 
 .popup__button_post {
     padding: 8px 24px;
     justify-content: flex-end;
+    align-self: flex-end;
     width: 124px;
     height: 40px;
+    background-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #FFDE17;
+    margin-top: 65px;
 }
 
 @media screen and (max-width: 375px) {
@@ -233,7 +275,7 @@
         align-items: center;
         margin-bottom: 0;
     }
-    .button {
+    .add-button {
         margin-top: 0;
     }
     .logo {
@@ -241,6 +283,29 @@
         padding-top: 0;
         height: 39px;
         width: 58px;
+    }
+    .popup__content {
+        height: 100%;
+        width: 100%;
+    }
+    .popup__content_header {
+        margin-top: 30%;
+        margin-left: 30px;
+        width: 275px;
+    }
+    .popup__content_body {
+        padding: 0 30px;
+    }
+    .popup__input {
+        padding: 18px 0 18px 18px;
+    }
+    .popup__url {
+        padding-left: 38px;
+    }
+    .popup__button_post {    
+    }
+    .popup__button_close {
+        margin-right: 30px;
     }
 }
 
