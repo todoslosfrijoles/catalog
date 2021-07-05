@@ -1,0 +1,53 @@
+@import '../vendor/normalize.css';
+@import '../vendor/fonts.css';
+@import '../blocks/root/root.css';
+@import '../images/Logo.png';
+@import '../images/image\ 1.jpg';
+@import '../images/Favicon.png';
+@import '../images/image\ 2.jpg';
+@import '../images/Vector.svg';
+@import '../images/Heart.svg';
+@import '../images/image\ 3.jpg';
+@import '../images/image\ 4.jpg;';
+@import '../catalog/images/backgroundimage1.jpg';
+
+.root {
+    padding: 0;
+}
+.backgroundpg1 { 
+    background-image: url(../images/backgroundimage1.jpg);
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.text1 {
+    width: 894px;
+    height: 165px;
+    margin: 0;
+    font-weight: 500;
+    color: #FFF;
+    font-size: 64px;
+    text-align: center;
+}
+.knopka {
+    background-color: #FFDE17;
+    border-style: none;
+    width: 211px;
+    height: 56px;
+    border-radius: 12px;
+    margin-top: 32px;
+}
+.logo {
+position: absolute;
+
+
+}
