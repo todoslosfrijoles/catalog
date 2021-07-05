@@ -46,8 +46,18 @@
     border-radius: 12px;
     margin-top: 32px;
 }
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    position: sticky;
+    top: 0;
+    background-color: transparent;
+}
+
 .logo {
-position: absolute;
-
-
+    width: 98.56px;
+    height: 65.29px;
+    padding-top: 11.22px;
 }
