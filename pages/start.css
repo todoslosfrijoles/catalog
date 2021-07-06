@@ -10,6 +10,7 @@
 @import '../images/image\ 3.jpg';
 @import '../images/image\ 4.jpg;';
 @import '../catalog/images/backgroundimage1.jpg';
+@import '../images/image\ 50.jpg';
 
 .root {
     padding: 0;
@@ -46,18 +47,63 @@
     border-radius: 12px;
     margin-top: 32px;
 }
-
 .header {
     display: flex;
     justify-content: space-between;
     padding-bottom: 10px;
-    position: sticky;
+    position: fixed;
     top: 0;
     background-color: transparent;
 }
 
 .logo {
+    margin-left: 120px;
     width: 98.56px;
     height: 65.29px;
     padding-top: 11.22px;
+}
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.project__text-header {
+   position: static;
+height: 62px;
+margin-top: 136px;
+font-style: normal;
+font-weight: 500;
+line-height: 62px;
+display: flex;
+align-items: center;
+text-align: center;
+font-size: 20px;
+
+
+}
+.project__content {
+    display: inline-flex;
+    flex-direction: row;
+    border-radius: 24px;
+}
+.levo{
+flex-direction: column;
+display: flex;
+}
+.project__content-img {
+    margin-top: 50px;
+    margin-left: 30px;
+    border-radius: 24px;
+}
+.project_img {
+    height: px;
+ border-radius: 24px;
+}
+.project__text1{
+    margin-bottom: 8px;
+}
+.project__content-text {
+    margin-top: 35px;
+    margin-right:120px;
 }
