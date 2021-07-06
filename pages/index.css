@@ -2,21 +2,47 @@
 @import '../vendor/fonts.css';
 @import '../blocks/root/root.css';
 @import '../images/Logo.png';
-@import '../images/image\ 1.jpg';
+@import '../images/image1.jpg';
 @import '../images/Favicon.png';
-@import '../images/image\ 2.jpg';
+@import '../images/image2.jpg';
 @import '../images/Vector.svg';
 @import '../images/Heart.svg';
-@import '../images/image\ 3.jpg';
-@import '../images/image\ 4.jpg;';
+@import '../images/image3.jpg';
+@import '../images/image4.jpg;';
+@import '../images/cross.svg';
+@import '../images/link.svg';
+
+@keyframes popup {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* @keyframes popup_close {
+    from {opacity: 1;}
+    to {opacity: 0;}
+} */
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+            supported by Chrome, Edge, Opera and Firefox */
+}
 
 .header {
-    display: flex;
-    justify-content: space-between;
     padding-bottom: 10px;
     position: sticky;
     top: 0;
-    background-color: white;
+    background-color: #fff;
+}
+
+.header__block {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 .logo {
@@ -25,7 +51,7 @@
     padding-top: 11.22px;
 }
 
-.button {
+.add-button {
     font-size: 16px;
     text-align: center;
     border-radius: 12px;
@@ -36,35 +62,56 @@
     border-width: 2px;
     border-color: #FF9E1F;
     border-style: solid;
-    background-color: white;
+    background-color: #fff;
 }
 
 .button:active {
     background-color: #e5e5e5;
 }
 
+.nav {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.nav__bar {
+    height: 31px;
+    display: inline-flex;
+    font-size: 24px;
+    padding: 0;
+    margin: 0;
+    color: rgba(0,0,0,0.5);
+    
+}
+
+.nav__filter {
+    list-style: none;
+    margin-right: 16px;
+    cursor: pointer;
+}
+
 .section {
-    background-color:white;
-    padding-top: 20px;
+    background-color: rgb(255, 255, 255);
     height: 100%;
     /*display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-gap: 16px;*/
-    padding-left: 0;
-    padding-right: 0;
     column-count: 4;
     column-width: 278px;
+    padding: 0;
+    justify-content: center;
 }
 
 .card {
     width: 262px;
     height: min-content;
-    border-color: black;
+    border-color: rgb(0, 0, 0);
     border-width: 2px;
     border-style: solid;
     border-radius: 18px;
-    padding: 8px 8px 14.7px 8px;
+    padding: 8px 8px 14px 8px;
     list-style: none;
     justify-self: center;
     break-inside: avoid;
@@ -81,7 +128,7 @@
 }
 
 .card__block {
-    display:flex;
+    display: flex;
     flex-direction: column;
 }
 .card__title {
@@ -97,17 +144,167 @@
 }
 
 .card__button {
-    background-image: url(../images/Vector.svg);
+    background-image: url(../images/heart1.svg);
     width: 20px;
-    height: 17.29px;
+    height: 17px;
     background-repeat: no-repeat;
     border-width: 0;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     align-self: flex-end;
 }
 
-.card__button:active,
-.card__button:focus {
+.card__button_active {
     background-image: url(../images/Heart.svg);
     background-position: center;
+    width: 20px;
+    height: 17px;
+    background-repeat: no-repeat;
+    border-width: 0;
+    background-color: rgb(255, 255, 255);
+    align-self: flex-end;
+}
+
+.nav__filter:active,
+.nav__filter:focus {
+    color: rgba(0,0,0,1);
+}
+
+.popup {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup__content {
+    width: 544px;
+    height: 330px;
+    padding: 41px 40px;
+    background-color: #fff;
+    border-style: solid;
+    border-width: 2px;
+    border-color:rgb(0, 0, 0);
+    border-radius: 35px;
+    position: relative;
+}
+
+.popup__content_header {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.popup__content_title {
+    padding: 0;
+    margin: 0;
+    font-size: 24px;
+    font-weight: 500px;
+}
+
+.popup__button_close {
+    background-image: url(../images/cross.svg);
+    width: 14px;
+    height: 14px;
+    background-repeat: no-repeat;
+    border-width: 0;
+    background-color: rgb(255, 255, 255);
+}
+
+.popup__content_body {
+    display: flex;
+    flex-direction: column;
+}
+
+.popup__link {
+    position: absolute;
+    margin-left: 17px;
+    margin-top: 31px;
+}
+
+.popup__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.popup__input {
+    padding: 18px 344px 18px 44px;
+    margin-top: 12px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #EBEAED;
+    border-width: 1px;
+}
+
+.popup__button_post {
+    padding: 8px 24px;
+    justify-content: flex-end;
+    align-self: flex-end;
+    width: 124px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #FFDE17;
+    margin-top: 65px;
+}
+
+@media screen and (max-width: 375px) {
+    .root {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .header__block {
+        padding-top: 16px;
+        padding-bottom: 16px;
+        height: 40px;
+        align-items: center;
+        margin-bottom: 0;
+    }
+    .add-button {
+        margin-top: 0;
+    }
+    .logo {
+        margin-top: 0;
+        padding-top: 0;
+        height: 39px;
+        width: 58px;
+    }
+    .popup__content {
+        height: 100%;
+        width: 100%;
+    }
+    .popup__content_header {
+        margin-top: 30%;
+        margin-left: 30px;
+        width: 275px;
+    }
+    .popup__content_body {
+        padding: 0 30px;
+    }
+    .popup__input {
+        padding: 18px 0 18px 18px;
+    }
+    .popup__url {
+        padding-left: 38px;
+    }
+    .popup__button_post {    
+    }
+    .popup__button_close {
+        margin-right: 30px;
+    }
+}
+
+@media screen and (max-width: 675px) {
+    .section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }

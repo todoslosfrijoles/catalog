@@ -11,83 +11,42 @@
 <body>
     <div class="root">
         <header class="header">
-            <img class="logo" src="./images/Logo.png" alt="Logo">
-            <button class="button">Добавить комикс</button>
+            <div class="header__block">
+                <img class="logo" src="./images/Logo.png" alt="Logo">
+                <button class="add-button">Добавить комикс</button>
+            </div>
+            <nav class="nav noselect">
+                <ul class="nav__bar">
+                    <li class="nav__filter">боевики</li>
+                    <li class="nav__filter">детективы</li>
+                    <li class="nav__filter">ужасы</li>
+                    <li class="nav__filter">фантастика</li>
+                    <li class="nav__filter">манга</li>
+                    <li class="nav__filter">супергерои</li>
+                    <li class="nav__filter">суперские челики</li>
+                </ul>
+            </nav>
         </header>
         <ul class="section">
-            <li class="card">
-                <img class="card__image" src="./images/image 1.jpg" alt="Comic Image">
-                <div class="card__block">
-                    <h2 class="card__title">The Marvel Age of Comics 1961–1978. 40th Ed</h2>
-                    <p class="card__text">Welcome to the Marvel Age of Comics, a triumphant era of comic and pop culture innovation which redefined the super hero genre.</p>
-                    <button class="card__button"></button>
-                </div>
-            </li>
-            <li class="card">
-                <img class="card__image" src="./images/image 2.jpg" alt="Comic Image">
-                <div class="card__block">
-                    <h2 class="card__title">TWalt Disney's Mickey Mouse. The Ultimate History. 40th Ed.</h2>
-                    <p class="card__text">Celebrate 90+ years of Mickey Mouse with one of the most expansive illustrated publications on the Disney universe: behind-the-scenes shots, rare animation art, and vintage comics trace Mickey’s cartoons, his comic adventures, the world of Mickey merchandise and memorabilia, as well as the legendary Mickey Mouse Club.</p>
-                    <button class="card__button"></button>
-                </div>
-            </li>
-            <li class="card">
-                <img class="card__image" src="./images/image 3.jpg" alt="Comic Image">
-                <div class="card__block">
-                    <h2 class="card__title">The Golden Age of DC Comics</h2>
-                    <p class="card__text">Get the ultimate insights on the heyday of DC Comics. Spanning from 1935 to 1956, more than 600 pages of covers and interiors, original illustrations, photographs, film stills, and ephemera chart the creators, the stories, and the game-changing super heroes Superman, Batman, and Wonder Woman.</p>
-                    <button class="card__button"></button>
-                </div>
-            </li>
-            <li class="card">
-                <img class="card__image" src="./images/image 4.jpg" alt="Comic Image">
-                <div class="card__block">
-                    <h2 class="card__title">The Little Book of Captain America</h2>
-                    <p class="card__text">Given an experimental super-serum, Steve Rogers became a super soldier who stands for liberty.</p>
-                    <button class="card__button"></button>
-                </div>
-            </li>
-            <li class="card">
-                <img class="card__image" src="./images/image 1.jpg" alt="Comic Image">
-                <div class="card__block">
-                    <h2 class="card__title">The Marvel Age of Comics 1961–1978. 40th Ed</h2>
-                    <p class="card__text">Welcome to the Marvel Age of Comics, a triumphant era of comic and pop culture innovation which redefined the super hero genre.</p>
-                    <button class="card__button"></button>
-                </div>
-            </li>
-            <li class="card">
-                <img class="card__image" src="./images/image 1.jpg" alt="Comic Image">
-                <div class="card__block">
-                    <h2 class="card__title">The Marvel Age of Comics 1961–1978. 40th Ed</h2>
-                    <p class="card__text">Welcome to the Marvel Age of Comics, a triumphant era of comic and pop culture innovation which redefined the super hero genre.</p>
-                    <button class="card__button"></button>
-                </div>
-            </li>
-            <li class="card">
-                <img class="card__image" src="./images/image 1.jpg" alt="Comic Image">
-                <div class="card__block">
-                    <h2 class="card__title">The Marvel Age of Comics 1961–1978. 40th Ed</h2>
-                    <p class="card__text">Welcome to the Marvel Age of Comics, a triumphant era of comic and pop culture innovation which redefined the super hero genre.</p>
-                    <button class="card__button"></button>
-                </div>
-            </li>
-            <li class="card">
-                <img class="card__image" src="./images/image 1.jpg" alt="Comic Image">
-                <div class="card__block">
-                    <h2 class="card__title">The Marvel Age of Comics 1961–1978. 40th Ed</h2>
-                    <p class="card__text">Welcome to the Marvel Age of Comics, a triumphant era of comic and pop culture innovation which redefined the super hero genre.</p>
-                    <button class="card__button"></button>
-                </div>
-            </li>
-            <li class="card">
-                <img class="card__image" src="./images/image 1.jpg" alt="Comic Image">
-                <div class="card__block">
-                    <h2 class="card__title">The Marvel Age of Comics 1961–1978. 40th Ed</h2>
-                    <p class="card__text">Welcome to the Marvel Age of Comics, a triumphant era of comic and pop culture innovation which redefined the super hero genre.</p>
-                    <button class="card__button"></button>
-                </div>
-            </li>
         </ul>
+        <div class="popup">
+            <div class="popup__content">
+                <div class="popup__content_header">
+                    <h3 class="popup__content_title">Добавить комикс</h3>
+                    <button class="popup__button_close"></button>
+                </div>
+                <div class="popup__content_body">
+                    <img class="popup__link" src="images/link.svg">
+                    <form class="popup__form">
+                        <input placeholder="Ссылка на обложку" type="url" class="popup__input popup__url">
+                        <input placeholder="Заголовок" class="popup__input">
+                        <input placeholder="Описание комикса" class="popup__input">
+                        <button class="popup__button_post">Добавить</button>
+                    </form>
+                </div>
+            </div>
         </div>
+    </div>
+    <script src="./script/index.js"></script>
 </body>
 </html>
