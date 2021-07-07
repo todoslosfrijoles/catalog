@@ -36,7 +36,17 @@ const cardData = [
         Text: "Welcome to the Marvel Age of Comics, a triumphant era of comic and pop culture innovation which redefined the super hero genre."
     },
     {
-        url: "./images/image1.jpg",
+        url: "./images/image2.jpg",
+        name: "The Marvel Age of Comics 1961–1978. 40th Ed",
+        Text: "Welcome to the Marvel Age of Comics, a triumphant era of comic and pop culture innovation which redefined the super hero genre."
+    },
+    {
+        url: "./images/image3.jpg",
+        name: "The Marvel Age of Comics 1961–1978. 40th Ed",
+        Text: "Welcome to the Marvel Age of Comics, a triumphant era of comic and pop culture innovation which redefined the super hero genre."
+    },
+    {
+        url: "./images/image4.jpg",
         name: "The Marvel Age of Comics 1961–1978. 40th Ed",
         Text: "Welcome to the Marvel Age of Comics, a triumphant era of comic and pop culture innovation which redefined the super hero genre."
     },
@@ -46,33 +56,56 @@ const cardData = [
         Text: "Welcome to the Marvel Age of Comics, a triumphant era of comic and pop culture innovation which redefined the super hero genre."
     },
     {
-        url: "./images/image1.jpg",
+        url: "./images/image4.jpg",
         name: "The Marvel Age of Comics 1961–1978. 40th Ed",
         Text: "Welcome to the Marvel Age of Comics, a triumphant era of comic and pop culture innovation which redefined the super hero genre."
     },
     {
-        url: "./images/image1.jpg",
+        url: "./images/image4.jpg",
+        name: "The Marvel Age of Comics 1961–1978. 40th Ed",
+        Text: "Welcome to the Marvel Age of Comics, a triumphant era of comic and pop culture innovation which redefined the super hero genre."
+    },
+    {
+        url: "./images/image4.jpg",
         name: "The Marvel Age of Comics 1961–1978. 40th Ed",
         Text: "Welcome to the Marvel Age of Comics, a triumphant era of comic and pop culture innovation which redefined the super hero genre."
     }
 ]
 
-function createCard () {
-    cardSection.insertAdjacentHTML('afterbegin', `
-    <li class="card">
-        <img class="card__image" src="${cardData[i].url}" alt="${cardData[i].name}">
-        <div class="card__block">
-            <h2 class="card__title">${cardData[i].name}</h2>
-            <p class="card__text">${cardData[i].Text}</p>
-            <button class="card__button"></button>
-        </div>
-    </li>
-`);
-}
+// function createCard () {
+//     cardSection.insertAdjacentHTML('afterbegin', `
+//     <li class="card">
+//         <img class="card__image" src="${cardData[i].url}" alt="${cardData[i].name}">
+//         <div class="card__block">
+//             <h2 class="card__title">${cardData[i].name}</h2>
+//             <p class="card__text">${cardData[i].Text}</p>
+//             <button class="card__button"></button>
+//         </div>
+//     </li>
+// `);
+// }
 
-for (i = 0; cardData.length > i; i++) {
-    createCard(cardData);
-    console.log(i)
-};
+// for (i = 0; cardData.length > i; i++) {
+//     createCard(cardData);
+//     console.log(i)
+// };
+
+
+const temp = document.querySelector(".card__template");
+const inputURL = document.querySelector(".popup__input_url");
+const inputName = document.querySelector(".popup__input_name");
+const inputText = document.querySelector(".popup__input_text");
+
+const cardURL = document.querySelector(".card__image");
+const cardName = document.querySelector(".card__title");
+const cardText = document.querySelector(".card__text");
+
+function formSubmitHandler (evt) {
+    evt.preventDefault();
+    console.log(inputName.value)
+
+    // cardName.textContent = inputName.value;
+    // cardText.textContent = inputText.value;
+}
 
 

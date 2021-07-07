@@ -27,8 +27,18 @@
                 </ul>
             </nav>
         </header>
-        <ul class="section">
-        </ul>
+        <template id="card__template">
+            <ul class="section">
+                <li class="card">
+                    <img class="card__image" src="${cardData[i].url}" alt="${cardData[i].name}">
+                    <div class="card__block">
+                        <h2 class="card__title">${cardData[i].name}</h2>
+                        <p class="card__text">${cardData[i].Text}</p>
+                        <button class="card__button"></button>
+                    </div>
+                </li>
+            </ul>
+        </template>
         <div class="popup">
             <div class="popup__content">
                 <div class="popup__content_header">
@@ -38,9 +48,9 @@
                 <div class="popup__content_body">
                     <img class="popup__link" src="images/link.svg">
                     <form class="popup__form">
-                        <input placeholder="Ссылка на обложку" type="url" class="popup__input popup__url">
-                        <input placeholder="Заголовок" class="popup__input">
-                        <input placeholder="Описание комикса" class="popup__input">
+                        <input placeholder="Ссылка на обложку" type="url" class="popup__input popup__input_url">
+                        <input placeholder="Заголовок" class="popup__input popup__input_name">
+                        <input placeholder="Описание комикса" class="popup__input popup__input_text">
                         <button class="popup__button_post">Добавить</button>
                     </form>
                 </div>
