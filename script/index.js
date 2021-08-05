@@ -54,66 +54,86 @@ const cardData = [
     }
 ]
 
-function createCard () {
-    let imgValue = document.querySelector(".popup__input_url").value
-    const cardContainer = document.createElement('li')
-    cardContainer.classList.add('card')
+// function createCard () {
+//     let imgValue = document.querySelector(".popup__input_url").value
+//     const cardContainer = document.createElement('li')
+//     cardContainer.classList.add('card')
 
-    const cardImg = document.createElement('img')
-    cardImg.classList.add('card__image')
-    cardImg.setAttribute('src', imgValue);
-    const cardBlock = document.createElement('div')
-    cardBlock.classList.add('card__block')
+//     const cardImg = document.createElement('img')
+//     cardImg.classList.add('card__image')
+//     cardImg.setAttribute('src', imgValue);
+//     const cardBlock = document.createElement('div')
+//     cardBlock.classList.add('card__block')
 
-    const cardTitle = document.createElement('h2')
-    cardTitle.classList.add('card__title')
+//     const cardTitle = document.createElement('h2')
+//     cardTitle.classList.add('card__title')
 
-    const cardText = document.createElement('p')
-    cardText.classList.add('card__text')
+//     const cardText = document.createElement('p')
+//     cardText.classList.add('card__text')
 
-    const cardButton = document.createElement('button')
-    cardButton.classList.add('card__button')
+//     const cardButton = document.createElement('button')
+//     cardButton.classList.add('card__button')
 
-    cardContainer.append(cardImg, cardBlock)
-    cardBlock.append(cardTitle, cardText, cardButton)
+//     cardContainer.append(cardImg, cardBlock)
+//     cardBlock.append(cardTitle, cardText, cardButton)
     
-    const cardSection = document.querySelector(".section")
+//     const cardSection = document.querySelector(".section")
 
-    cardContainer.append(cardBlock);
-    cardSection.append(cardContainer);
-    console.log(cardContainer);
+//     cardContainer.append(cardBlock);
+//     cardSection.append(cardContainer);
+//     console.log(cardContainer);
+// }
+
+const cardContainer = document.querySelector('.section')
+
+function createCard (titleValue, textValue) {
+    const cardTemplate = document.querySelector('#card__template').content;
+    const cardElement = cardTemplate.querySelector('.card').cloneNode(true);
+
+    cardElement.querySelector('.card__title').textContent = titleValue
+    cardElement.querySelector('.card__text').textContent = textValue
+
+    cardContainer.append(cardElement)
 }
 
-function formSubmitHandler (evt) {
+function formSubmitHandler(evt) {
     evt.preventDefault();
-    createCard()
-    let imgContainer = document.querySelector('.card__image')
-    console.log(imgContainer, 'lol');
-    let titleValue = document.querySelector(".popup__input_name").value
-    let textValue = document.querySelector(".popup__input_text").value
-    console.log(titleValue)
-    imgContainer.setAttribute = ("src", 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/440px-Image_created_with_a_mobile_phone.png');
-    document.querySelector('.card__title').textContent = titleValue;
-    document.querySelector('.card__text').textContent = textValue;
+    // let imgContainer = document.querySelector('.card__image')
+    // console.log(imgContainer, 'lol');
+    // let titleValue = document.querySelector(".popup__input_name").value
+    // let textValue = document.querySelector(".popup__input_text").value
+    // imgContainer.setAttribute = ("src", 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/440px-Image_created_with_a_mobile_phone.png');
+    // document.querySelector('.card__title').textContent = titleValue;
+    // document.querySelector('.card__text').textContent = textValue;
+    console.log(cardData);
     closePopup ()
 }
 
-let titleValue = document.querySelector(".popup__input_name").value
-let textValue = document.querySelector(".popup__input_text").value
-let imgValue = document.querySelector(".popup__input_url").value
+// let titleValue = document.querySelector(".popup__input_name").value
+// let textValue = document.querySelector(".popup__input_text").value
+// let imgValue = document.querySelector(".popup__input_url").value
 
-let dataCard = {
-    url: imgValue,
-    name: titleValue,
-    text: textValue
-}
+// let dataCard = {
+//     document.querySelector(".popup__input_name").value,
+//     document.querySelector(".popup__input_text").value,
+//     document.querySelector(".popup__input_url").value
 
-cardData.push(dataCard)
+// }
+
+// cardData.push(dataCard)
 
 const formElement= document.querySelector(".popup__content")
 formElement.addEventListener('submit', formSubmitHandler)
+formElement.addEventListener('submit', function () {
+    const title = document.querySelector('.popup__input_name').value
+    const text =document.querySelector('.popup__input_text').value
 
-console.log(cardData)
+    createCard(title,text)
+
+    title = '';
+    text = '';
+})
+
 
 
 

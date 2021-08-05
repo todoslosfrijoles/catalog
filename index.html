@@ -29,14 +29,7 @@
         </header>
         <div>
             <ul class="section">
-                <!-- <li class="card">
-                    <img class="card__image" src="${cardData[i].url}" alt="${cardData[i].name}">
-                    <div class="card__block">
-                        <h2 class="card__title">${cardData[i].name}</h2>
-                        <p class="card__text">${cardData[i].Text}</p>
-                        <button class="card__button"></button>
-                    </div>
-                </li> -->
+
             </ul>
         </div>
         <div class="popup">
@@ -57,6 +50,18 @@
             </div>
         </div>
     </div>
+
+    <template id='card__template'>
+        <li class="card">
+            <img class="card__image" src="" alt="${cardData[i].name}">
+            <div class="card__block">
+                <h2 class="card__title"></h2>
+                <p class="card__text"></p>
+                <button class="card__button"></button>
+            </div>
+        </li>
+    </template>
+
     <script src="./script/index.js"></script>
 </body>
 </html>
