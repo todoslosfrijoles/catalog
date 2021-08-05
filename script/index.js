@@ -11,6 +11,8 @@ likeBtn.forEach((element) => {
     })
 }); 
 
+
+
 let popupBtn = document.querySelector('.add-button');
 let popupBtnClose = document.querySelector('.popup__button_close');
 
@@ -33,92 +35,33 @@ const cardData = [
     {
         url: "./images/image1.jpg",
         name: "The Marvel Age of Comics 1961–1978. 40th Ed",
-        Text: "Welcome to the Marvel Age of Comics, a triumphantera of comic and pop culture innovation which redefined the super hero genre."
+        text: "Welcome to the Marvel Age of Comics, a triumphantera of comic and pop culture innovation which redefined the super hero genre."
     },
     {
         url: "./images/image2.jpg",
         name: "The Marvel Age of Comics 1961–1978. 40th Ed",
-        Text: "Welcome to the Marvel Age of Comics, a triumphantera of comic and pop culture innovation which redefined the super hero genre."
+        text: "Welcome to the Marvel Age of Comics, a triumphantera of comic and pop culture innovation which redefined the super hero genre."
     },
     {
         url: "./images/image3.jpg",
         name: "The Marvel Age of Comics 1961–1978. 40th Ed",
-        Text: "Welcome to the Marvel Age of Comics, a triumphantera of comic and pop culture innovation which redefined the super hero genre."
+        text: "Welcome to the Marvel Age of Comics, a triumphantera of comic and pop culture innovation which redefined the super hero genre."
     },
     {
         url: "./images/image4.jpg",
         name: "The Marvel Age of Comics 1961–1978. 40th Ed",
-        Text: "Welcome to the Marvel Age of Comics, a triumphantera of comic and pop culture innovation which redefined the super hero genre."
-    },
-    {
-        url: "./images/image1.jpg",
-        name: "The Marvel Age of Comics 1961–1978. 40th Ed",
-        Text: "Welcome to the Marvel Age of Comics, a triumphantera of comic and pop culture innovation which redefined the super hero genre."
-    },
-    {
-        url: "./images/image4.jpg",
-        name: "The Marvel Age of Comics 1961–1978. 40th Ed",
-        Text: "Welcome to the Marvel Age of Comics, a triumphantera of comic and pop culture innovation which redefined the super hero genre."
-    },
-    {
-        url: "./images/image4.jpg",
-        name: "The Marvel Age of Comics 1961–1978. 40th Ed",
-        Text: "Welcome to the Marvel Age of Comics, a triumphantera of comic and pop culture innovation which redefined the super hero genre."
-    },
-    {
-        url: "./images/image4.jpg",
-        name: "The Marvel Age of Comics 1961–1978. 40th Ed",
-        Text: "Welcome to the Marvel Age of Comics, a triumphantera of comic and pop culture innovation which redefined the super hero genre."
+        text: "Welcome to the Marvel Age of Comics, a triumphantera of comic and pop culture innovation which redefined the super hero genre."
     }
 ]
 
-// function createCard () {
-//     cardSection.insertAdjacentHTML('afterbegin', `
-//     <li class="card">
-//         <img class="card__image" src="${cardData[i].url}" alt="${cardData[i].name}">
-//         <div class="card__block">
-//             <h2 class="card__title">${cardData[i].name}</h2>
-//             <p class="card__text">${cardData[i].Text}</p>
-//             <button class="card__button"></button>
-//         </div>
-//     </li>
-// `);
-// }
-
-// for (i = 0; cardData.length > i; i++) {
-//     createCard(cardData);
-//     console.log(i)
-// };
-
-
-// const temp = document.querySelector(".card__template");
-// const inputURL = document.querySelector(".popup__input_url")
-// const inputName = document.querySelector(".popup__input_name")
-// const inputText = document.querySelector(".popup__input_text")
-const formElement= document.querySelector(".popup__content")
-const cardSection = document.querySelector(".section");
-// const cardURL = document.querySelector(".card__image");
-// const cardName = document.querySelector(".card__title");
-// const cardText = document.querySelector(".card__text");
-
-function formSubmitHandler (evt) {
-    evt.preventDefault();
-
-    var imgValue = document.querySelector(".popup__input_url").value
-    var titleValue = document.querySelector(".popup__input_name").value
-    var textValue = document.querySelector(".popup__input_text").value
-}
-
-formElement.addEventListener('submit', formSubmitHandler)
-
-
 function createCard () {
+    let imgValue = document.querySelector(".popup__input_url").value
     const cardContainer = document.createElement('li')
     cardContainer.classList.add('card')
 
     const cardImg = document.createElement('img')
     cardImg.classList.add('card__image')
-
+    cardImg.setAttribute('src', imgValue);
     const cardBlock = document.createElement('div')
     cardBlock.classList.add('card__block')
 
@@ -134,10 +77,47 @@ function createCard () {
     cardContainer.append(cardImg, cardBlock)
     cardBlock.append(cardTitle, cardText, cardButton)
     
+    const cardSection = document.querySelector(".section")
+
     cardContainer.append(cardBlock);
+    cardSection.append(cardContainer);
     console.log(cardContainer);
 }
 
-createCard()
+function formSubmitHandler (evt) {
+    evt.preventDefault();
+    createCard()
+    let imgContainer = document.querySelector('.card__image')
+    console.log(imgContainer, 'lol');
+    let titleValue = document.querySelector(".popup__input_name").value
+    let textValue = document.querySelector(".popup__input_text").value
+    console.log(titleValue)
+    imgContainer.setAttribute = ("src", 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/440px-Image_created_with_a_mobile_phone.png');
+    document.querySelector('.card__title').textContent = titleValue;
+    document.querySelector('.card__text').textContent = textValue;
+    closePopup ()
+}
+
+let titleValue = document.querySelector(".popup__input_name").value
+let textValue = document.querySelector(".popup__input_text").value
+let imgValue = document.querySelector(".popup__input_url").value
+
+let dataCard = {
+    url: imgValue,
+    name: titleValue,
+    text: textValue
+}
+
+cardData.push(dataCard)
+
+const formElement= document.querySelector(".popup__content")
+formElement.addEventListener('submit', formSubmitHandler)
+
+console.log(cardData)
+
+
+
+
+
 
 
