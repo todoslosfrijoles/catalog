@@ -1,12 +1,12 @@
-let likeBtn = document.querySelectorAll('.card__button');
+let likeBtnHC = document.querySelectorAll('.card__button_hardcode');
 
-likeBtn.forEach((element) => {
+likeBtnHC.forEach((element) => {
     element.addEventListener('click', function () {
         let attribute = element.getAttribute('class');
-            if (attribute === 'card__button') {
-                element.classList.add('card__button_active');
+            if (attribute === 'card__button_hardcode') {
+                element.classList.add('card__button_hardcode_active');
             } else {
-                element.classList.remove('card__button_active');
+                element.classList.remove('card__button_hardcode_active');
             }
     })
 }); 
@@ -31,58 +31,23 @@ popupBtnClose.addEventListener('click', closePopup);
 
 
 
-const cardData = [
-    {
-        url: "./images/image1.jpg",
-        name: "The Marvel Age of Comics 1961–1978. 40th Ed",
-        text: "Welcome to the Marvel Age of Comics, a triumphantera of comic and pop culture innovation which redefined the super hero genre."
-    },
-    {
-        url: "./images/image2.jpg",
-        name: "The Marvel Age of Comics 1961–1978. 40th Ed",
-        text: "Welcome to the Marvel Age of Comics, a triumphantera of comic and pop culture innovation which redefined the super hero genre."
-    },
-    {
-        url: "./images/image3.jpg",
-        name: "The Marvel Age of Comics 1961–1978. 40th Ed",
-        text: "Welcome to the Marvel Age of Comics, a triumphantera of comic and pop culture innovation which redefined the super hero genre."
-    },
-    {
-        url: "./images/image4.jpg",
-        name: "The Marvel Age of Comics 1961–1978. 40th Ed",
-        text: "Welcome to the Marvel Age of Comics, a triumphantera of comic and pop culture innovation which redefined the super hero genre."
-    }
-]
+// let delPopupBtn = document.querySelector('.trash');
+// let delPopupBtnClose = document.querySelector('.trash__close');
 
-// function createCard () {
-//     let imgValue = document.querySelector(".popup__input_url").value
-//     const cardContainer = document.createElement('li')
-//     cardContainer.classList.add('card')
-
-//     const cardImg = document.createElement('img')
-//     cardImg.classList.add('card__image')
-//     cardImg.setAttribute('src', imgValue);
-//     const cardBlock = document.createElement('div')
-//     cardBlock.classList.add('card__block')
-
-//     const cardTitle = document.createElement('h2')
-//     cardTitle.classList.add('card__title')
-
-//     const cardText = document.createElement('p')
-//     cardText.classList.add('card__text')
-
-//     const cardButton = document.createElement('button')
-//     cardButton.classList.add('card__button')
-
-//     cardContainer.append(cardImg, cardBlock)
-//     cardBlock.append(cardTitle, cardText, cardButton)
-    
-//     const cardSection = document.querySelector(".section")
-
-//     cardContainer.append(cardBlock);
-//     cardSection.append(cardContainer);
-//     console.log(cardContainer);
+// function openDelPopup () {
+//     document.querySelector(".trash__popup").style.cssText = "display: flex;"
+//     document.querySelector("body").style.cssText = "overflow: hidden;"
 // }
+
+// function closeDelPopup (popUp) {
+//     document.querySelector(".trash__popup").style.display = "none";
+//     document.querySelector("body").style.cssText = "overflow: visible;"
+// }
+
+// delPopupBtn.addEventListener('click', openDelPopup);
+// delPopupBtnClose.addEventListener('click', closeDelPopup);
+
+
 
 const cardContainer = document.querySelector('.section')
 
@@ -94,18 +59,16 @@ function createCard (titleValue, textValue) {
     cardElement.querySelector('.card__text').textContent = textValue
 
     cardContainer.append(cardElement)
+    
+    const likeBtn = document.querySelector('.card__button');
+    likeBtn.addEventListener('click', function (event) {
+        event.target.classList.toggle('card__button_active')
+    })
 }
 
 function formSubmitHandler(evt) {
     evt.preventDefault();
-    // let imgContainer = document.querySelector('.card__image')
-    // console.log(imgContainer, 'lol');
-    // let titleValue = document.querySelector(".popup__input_name").value
-    // let textValue = document.querySelector(".popup__input_text").value
-    // imgContainer.setAttribute = ("src", 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/440px-Image_created_with_a_mobile_phone.png');
-    // document.querySelector('.card__title').textContent = titleValue;
-    // document.querySelector('.card__text').textContent = textValue;
-    console.log(cardData);
+    // cardDataPush ()
     closePopup ()
 }
 
@@ -113,26 +76,45 @@ function formSubmitHandler(evt) {
 // let textValue = document.querySelector(".popup__input_text").value
 // let imgValue = document.querySelector(".popup__input_url").value
 
-// let dataCard = {
-//     document.querySelector(".popup__input_name").value,
-//     document.querySelector(".popup__input_text").value,
-//     document.querySelector(".popup__input_url").value
-
+// function cardDataPush () {
+//     cardData.push(document.querySelector(".popup__input_text").value);
+//     console.log(cardData);
+//     return false;
 // }
-
-// cardData.push(dataCard)
 
 const formElement= document.querySelector(".popup__content")
 formElement.addEventListener('submit', formSubmitHandler)
 formElement.addEventListener('submit', function () {
     const title = document.querySelector('.popup__input_name').value
-    const text =document.querySelector('.popup__input_text').value
+    const text = document.querySelector('.popup__input_text').value
 
-    createCard(title,text)
-
-    title = '';
-    text = '';
+    createCard(title, text)
 })
+
+
+
+// let trashBtnHC = document.querySelectorAll('.trash_hardcode');
+
+// trashBtnHC.forEach((element) => {
+//     element.addEventListener('click', function () {
+//         let attribute = element.getAttribute('class');
+//             if (attribute === 'card__button_hardcode') {
+//                 element.classList.add('card__button_hardcode_active');
+//             } else {
+//                 element.classList.remove('card__button_hardcode_active');
+//             }
+//     })
+// }); 
+
+
+// function removeCard () {
+//     const trashBtn = document.querySelector('.trash');
+//     likeBtn.addEventListener('click', function (event) {
+//         event.target.classList.toggle('card__button_active')
+// }
+
+// to fully remove an element from the dom structure, use trashelement.parentElement.removeChild(trashelement);
+// in this case, possibly use the (event) to highlight what is to be deleted?
 
 
 
