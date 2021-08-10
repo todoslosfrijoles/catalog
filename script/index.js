@@ -64,6 +64,14 @@ function createCard (titleValue, textValue) {
     likeBtn.addEventListener('click', function (event) {
         event.target.classList.toggle('card__button_active')
     })
+
+    const trashBtn = document.querySelector('.trash');
+    trashBtn.addEventListener('click', function (event) {
+        const exB = event.target.parentNode
+        const exBB = exB.parentNode
+        const exBBB = exBB.parentNode
+        exBBB.parentElement.removeChild(exBBB)
+    })
 }
 
 function formSubmitHandler(evt) {
@@ -92,7 +100,6 @@ formElement.addEventListener('submit', function () {
 })
 
 
-
 // let trashBtnHC = document.querySelectorAll('.trash_hardcode');
 
 // trashBtnHC.forEach((element) => {
@@ -107,19 +114,29 @@ formElement.addEventListener('submit', function () {
 // }); 
 
 
-// function removeCard () {
-//     const trashBtn = document.querySelector('.trash');
-//     likeBtn.addEventListener('click', function (event) {
-//         event.target.classList.toggle('card__button_active')
-// }
+// trashBtn.addEventListener('click', function (event) {
+//     const sectionElement = document.querySelector('.section')
+//     const exP = event.target.parentNode
+//     const exPP = exP.parentNode
+//     const exPPP = exPP.parentNode
+//     console.log(exPPP)
+//     exPPP.target.sectionElement.removeChild(exPPP)
+// })
+
+
+const trashBtnHC = document.querySelectorAll('.trash__hardcode');
+trashBtnHC.forEach((element) => {
+    element.addEventListener('click', function () {
+        // const sectionElement = document.querySelector('.section')
+        const exP = element.parentNode
+        const exPP = exP.parentNode
+        const exPPP = exPP.parentNode
+        exPPP.parentElement.removeChild(exPPP)
+    })
+})
+
+
+
 
 // to fully remove an element from the dom structure, use trashelement.parentElement.removeChild(trashelement);
 // in this case, possibly use the (event) to highlight what is to be deleted?
-
-
-
-
-
-
-
-
