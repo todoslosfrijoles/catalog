@@ -11,6 +11,9 @@
 @import '../images/image4.jpg;';
 @import '../images/cross.svg';
 @import '../images/link.svg';
+@import '../images/tochki.svg';
+@import '../images/tochki2.svg';
+@import '../images/trash.svg';
 
 @keyframes popup {
     from {opacity: 0;}
@@ -37,6 +40,10 @@
     position: sticky;
     top: 0;
     background-color: #fff;
+    background-image: url(../images/tochki2.svg);
+    background-repeat: no-repeat;
+    background-size: 875px 900px;
+    background-position: -30px -550px;
 }
 
 .header__block {
@@ -143,6 +150,31 @@
     margin-block-end: 0;
 }
 
+.card__footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 6px;
+}
+
+.trash {
+    background-image: url(../images/trash.svg);
+    width: 18px;
+    height: 20px;
+    background-repeat: no-repeat;
+    border-width: 0;
+    align-self: center;
+}
+
+.trash__hardcode {
+    background-image: url(../images/trash.svg);
+    width: 18px;
+    height: 20px;
+    background-repeat: no-repeat;
+    border-width: 0;
+    align-self: center;
+}
+
 .card__button {
     background-image: url(../images/heart1.svg);
     width: 20px;
@@ -150,7 +182,7 @@
     background-repeat: no-repeat;
     border-width: 0;
     background-color: rgb(255, 255, 255);
-    align-self: flex-end;
+    align-self: center;
 }
 
 .card__button_active {
@@ -161,7 +193,28 @@
     background-repeat: no-repeat;
     border-width: 0;
     background-color: rgb(255, 255, 255);
-    align-self: flex-end;
+    align-self: center;
+}
+
+.card__button_hardcode {
+    background-image: url(../images/heart1.svg);
+    width: 20px;
+    height: 17px;
+    background-repeat: no-repeat;
+    border-width: 0;
+    background-color: rgb(255, 255, 255);
+    align-self: center;
+}
+
+.card__button_hardcode_active {
+    background-image: url(../images/Heart.svg);
+    background-position: center;
+    width: 20px;
+    height: 17px;
+    background-repeat: no-repeat;
+    border-width: 0;
+    background-color: rgb(255, 255, 255);
+    align-self: center;
 }
 
 .nav__filter:active,
@@ -255,6 +308,76 @@
     margin-top: 65px;
 }
 
+
+/* .trash__popup {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.trash__popup_content {
+    width: 544px;
+    height: 330px;
+    padding: 41px 40px;
+    background-color: #fff;
+    border-style: solid;
+    border-width: 2px;
+    border-color:rgb(0, 0, 0);
+    border-radius: 35px;
+    position: relative;
+}
+
+.trash__popup_button {
+    flex-direction: row;
+}
+
+.trash___popup_button {
+    font-size: 16px;
+    text-align: center;
+    border-radius: 12px;
+    height: 40px;
+    width: 182px;
+    background-color: rgba(0,0,0,0.04);
+    border-width: 2px;
+    border-color: #FF9E1F;
+    border-style: solid;
+    background-color: #fff;
+} */
+@media screen and (max-width: 540px) {
+    .root {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    .popup__content {
+        height: 100%;
+        width: 100%;
+        border-style: none;
+    }
+    .popup__content_header {
+        margin-top: 30%;
+        margin-left: 30px;
+        width: 275px;
+    }
+    .popup__content_body {
+        padding: 0 30px;
+    }
+    .popup__input {
+        padding: 18px 0 18px 18px;
+    }
+    .popup__url {
+        padding-left: 38px;
+    }
+    .popup__button_close {
+        margin-right: 30px;
+    }
+}
+
 @media screen and (max-width: 375px) {
     .root {
         padding-left: 16px;
@@ -294,8 +417,6 @@
     .popup__url {
         padding-left: 38px;
     }
-    .popup__button_post {    
-    }
     .popup__button_close {
         margin-right: 30px;
     }
@@ -306,5 +427,30 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .root {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    .add-button {
+        font-size: 12px;
+        border-radius: 10px;
+        height: 30px;
+        width: 150px;
+        margin-top: 0;
+    }
+    .card {
+        width: 240px;
+    }
+    .card__image {
+        width: 240px;
+        height: 240px;
+        background-position: center;
+        background-size: cover;
+        border-radius: 18px;
+        display: inline-grid;
     }
 }
