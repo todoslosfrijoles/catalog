@@ -14,6 +14,7 @@
 @import '../images/image\ 1\(2\).jpg';
 @import '../images/image\ 51.jpg';
 @import '../images/image\ 52.jpg';
+@import '../images/Vector.jpg';
 
 * {
     font-family: 'VisueltPro';
@@ -22,7 +23,6 @@
 .layout {
     padding: 0 120px; 
 }
-
 .intro { 
     background-image: url(../images/backgroundimage1.jpg);
     height: 100vh;
@@ -145,8 +145,8 @@
     padding-right: 24px;
 }
 .meaning__img__card {
-    width: 524px;
-    height: 154px;
+    max-width: 524px;
+    max-height: 154px;
 
 }
 .meaning_img__text1 {
@@ -234,27 +234,55 @@
 }
 
 @media screen and (max-width: 375px) {
-    body {
-        overflow:auto;
-        max-width: 375px;
+    .intro__text {
+        width: auto;
+        height: auto;
     }
     .intro {
-        width: 375px;
+        max-width: 375px;
         width: 100%;
     }
-    .meaning__card__box {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-column-gap: 10px;
-        grid-row-gap: 8px;
-        margin-bottom: 90px;
-    
+    .team__img {
+        margin-left: 25px;
+        margin-right: 24px;
+        border-style: solid;
+        border-radius: 16px;
+        border: 2px;
+        margin-top: 30px;
+        margin-bottom: 55px;
+        max-width: 340px;
     }
-}
+    .meaning {
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 340px;
+    width: 100%;
+    }
+    .meaning__text {
+        font-size: 2em;
+        margin: 0.67em 0;
+        align-items: center;
+        text-align: center;
+        width: 300px;
+    }
+    .project__img {
+        border-radius: 24px;
+        height: 600px;
+        max-width: 340px;
+        margin-left: -30px;
+    }
+    .project__content {
+        display: flex;
+        flex-direction: column;
+        border-radius: 24px;
+    }
+
 .header2 {
     border-bottom: rgba(128, 128, 128, 0.486) 1px;
     position: sticky;
-    position: -webkit-sticky;
+    position: -webkit-sticky; 
     border-top: 0;
     border-left: 0;
     border-right: 0;
@@ -285,4 +313,90 @@
     border-color:#FFDE17;
     border-radius: 12px;
     background-color: #FFF;
+}
+.meaning__card__content1 {
+    margin-left: -26px;
+    width: 276px;
+    height: 210px;
+    border-radius: 15px;
+    border-style: solid;
+}
+.meaning__img__card {
+    width: 327px;
+    margin-top: -25px;
+    max-width: 339px;
+    max-height: auto;
+    height: auto;
+    border-radius: 15px;
+    border-style: none;
+    margin-left: -26px;
+}
+
+
+.meaning_img__text1 {
+    width: 100%;
+    max-width: 375px;
+    height: 31px;
+    margin-left: 16px;
+    left: 24px;
+    margin-top: 16px;
+    margin-bottom: 40px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+}
+.meaning_img__text2 {
+    width: 100%;
+    max-width: 350px;
+    margin-left: 30px;
+    height: 21px;
+    left: 24px;
+    top: 40px;
+    color: gray;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 30px;
+    margin-left: 3px;
+    align-items: center;
+    text-align: center;
+}
+.meaning__card__box {
+    display: grid;
+    margin-left: 25px;
+    grid-template-columns:1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 8px;
+    margin-bottom: 90px;
+}
+.team__title {
+    align-items: center;
+    text-align: center;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 62px;
+}
+.check {
+    border: 4px solid #FFDE17;
+    box-sizing: border-box;
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url(../images/image\ 52.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+    margin-bottom: 117px;
+    max-width: 1163px;
+    margin: auto;
+    width: 100%;
+    margin-top: 150px;
+    margin-bottom: 100px;
+    width: 328px;
+    margin-left: -95px;
+}
+
 }
