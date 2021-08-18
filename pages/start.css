@@ -19,7 +19,6 @@
 * {
     font-family: 'VisueltPro';
 }
-
 .layout {
     padding: 0 120px; 
 }
@@ -39,12 +38,13 @@
 }
 
 .intro__text {
-    width: 894px;
+    max-width: 894px;
     height: 165px;
+    width: 100%;
     margin: 0;
     font-weight: 500;
     color: #FFF;
-    font-size: 64px;
+    font-size: 4em;
     text-align: center;
 }
 .intro__button {
@@ -97,7 +97,20 @@
     flex-direction: row;
     border-radius: 24px;
 }
-
+.header2__button {
+    margin-bottom: 15px;
+    margin-right: 120px;
+    align-self: flex-end;
+    margin-left: 100px;
+    margin-top: 24px;
+    width: 131px;
+    height: 40px;
+    line-height: 24px;
+    border-style: solid;
+    border-color:#FFDE17;
+    border-radius: 12px;
+    background-color: #FFF;
+}
 .levo{
     flex-direction: column;
     display: flex;
@@ -124,7 +137,27 @@
     margin-top: 40px;
     margin-right:120px;
 }
-
+.header2 {
+    border-bottom: rgba(128, 128, 128, 0.486) 1px;
+    position: sticky;
+    position: -webkit-sticky; 
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-style: solid;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    position: sticky;
+    top: 0;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 1);
+    justify-content: right;
+    flex-direction: column;
+}
 .project__text2 {
     color: gray;
     font-size: 16px;
@@ -195,6 +228,7 @@
 
 }
 .team__img {
+    width: 100%;
     border-style: solid;
     border-radius: 16px;
     border: 2px;
@@ -300,20 +334,6 @@
     justify-content: right;
     flex-direction: column;
 }
-.header2__button {
-    margin-bottom: 15px;
-    margin-right: 120px;
-    align-self: flex-end;
-    margin-left: 100px;
-    margin-top: 24px;
-    width: 131px;
-    height: 40px;
-    line-height: 24px;
-    border-style: solid;
-    border-color:#FFDE17;
-    border-radius: 12px;
-    background-color: #FFF;
-}
 .meaning__card__content1 {
     margin-left: -26px;
     width: 276px;
@@ -400,3 +420,68 @@
 }
 
 }
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 610px) {
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+@media screen and (max-width: 850px) {
+.project__content{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.levo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.project__content-text {
+    margin-right: 0;
+}
+.meaning__card__box {
+    display: grid;
+    margin-left: 25px;
+    grid-template-columns:1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 8px;
+    margin-bottom: 90px;
+}
+}
+@media screen and (max-width: 894px) {
+.intro__text {
+    font-size: 3em;
+}
+}
+@media screen and (max-width: 455px) {
+.intro__text{
+    font-size: 40px;
+}    
+
+}
+

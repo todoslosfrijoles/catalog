@@ -14,7 +14,6 @@
 @import '../images/tochki.svg';
 @import '../images/tochki2.svg';
 @import '../images/trash.svg';
-@import '../images/greybackground.jpeg';
 
 @keyframes popup {
     from {opacity: 0;}
@@ -133,7 +132,6 @@
     background-size: cover;
     border-radius: 18px;
     display: inline-grid;
-    object-fit: cover;
 }
 
 .card__block {
@@ -289,7 +287,7 @@
 }
 
 .popup__input {
-    padding: 18px 18px 18px 44px;
+    padding: 18px 344px 18px 44px;
     margin-top: 12px;
     border-radius: 10px;
     border-style: solid;
