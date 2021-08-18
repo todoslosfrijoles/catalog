@@ -183,7 +183,7 @@
 
 }
 .meaning_img__text1 {
-    width: 524px;
+    max-width: 524px;
     height: 31px;
     left: 24px;
     margin-top: 16px;
@@ -194,7 +194,7 @@
     line-height: 31px;
 }
 .meaning_img__text2 {
-    width: 524px;
+    max-width: 524px;
     height: 21px;
     left: 24px;
     top: 40px;
@@ -268,23 +268,35 @@
 }
 
 @media screen and (max-width: 375px) {
+    .logo {
+        margin-left: 20px;
+    }
+    .project__text-header{
+        margin-bottom: 32px;
+    }
+    .header2__button{
+        margin-right: 16px;
+    }
     .intro__text {
         width: auto;
         height: auto;
     }
     .intro {
         max-width: 375px;
+        height: 98vh;
         width: 100%;
     }
     .team__img {
-        margin-left: 25px;
-        margin-right: 24px;
-        border-style: solid;
-        border-radius: 16px;
-        border: 2px;
-        margin-top: 30px;
-        margin-bottom: 55px;
-        max-width: 340px;
+    height: 157px;
+    margin-left: 25px;
+    margin-right: 24px;
+    border-style: solid;
+    border-radius: 16px;
+    border: 2px;
+    margin-top: 12px;
+    margin-bottom: -64px;
+    max-width: 340px;
+    width: 262%;
     }
     .meaning {
         display: flex;
@@ -429,28 +441,43 @@
 
 
 
-@media screen and (max-width: 610px) {
+@media screen and (max-width: 810px) {
+    .meaning_img__text2{
+    text-align: center;
+    margin-top: 44px;
+    }
+    .meaning_img__text1{
+    text-align: center;
+    }
+}
 
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media screen and (max-width: 1339px) {
+    .meaning_img__text2{
+    text-align: center;
+    margin-top: 44px;
+    }
+    .meaning_img__text1{
+    text-align: center;
+    }
 }
 
 
 
-@media screen and (max-width: 850px) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1085px) {
 .project__content{
     flex-direction: column;
     justify-content: center;
@@ -485,3 +512,80 @@
 
 }
 
+
+
+
+
+@media screen and (max-width: 560px) {
+    .meaning {
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 340px;
+    width: 100%;
+    }
+    .meaning__text {
+        font-size: 2em;
+        margin: 0.67em 0;
+        align-items: center;
+        text-align: center;
+        width: 300px;
+    }
+    .meaning__card__content1 {
+        margin-left: -26px;
+        width: 276px;
+        height: 210px;
+        border-radius: 15px;
+        border-style: solid;
+    }
+    .meaning__img__card {
+        width: 327px;
+        margin-top: -25px;
+        max-width: 339px;
+        max-height: auto;
+        height: auto;
+        border-radius: 15px;
+        border-style: none;
+        margin-left: -26px;
+    }
+    
+    
+    .meaning_img__text1 {
+        width: 100%;
+        max-width: 375px;
+        height: 31px;
+        margin-left: 16px;
+        left: 24px;
+        margin-top: 16px;
+        margin-bottom: 40px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .meaning_img__text2 {
+        width: 100%;
+        max-width: 350px;
+        margin-left: 30px;
+        height: 21px;
+        left: 24px;
+        top: 40px;
+        color: gray;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 30px;
+        margin-left: 3px;
+        align-items: center;
+        text-align: center;
+    }
+    .meaning__card__box {
+        display: grid;
+        margin-left: 25px;
+        grid-template-columns:1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 8px;
+        margin-bottom: 90px;
+    }
+}
