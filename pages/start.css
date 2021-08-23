@@ -66,7 +66,8 @@
 }
 
 .logo {
-    margin-left: 120px;
+    align-self: flex-start;
+    margin-left: 60px;
     width: 98.56px;
     height: 65.29px;
     padding-top: 11.22px;
@@ -98,10 +99,10 @@
     border-radius: 24px;
 }
 .header2__button {
+    width: 100vw;
     margin-bottom: 15px;
-    margin-right: 120px;
     align-self: flex-end;
-    margin-left: 100px;
+    margin-right: 60px;
     margin-top: 24px;
     width: 131px;
     height: 40px;
@@ -396,7 +397,8 @@
 }
 .meaning__card__box {
     display: grid;
-    margin-left: 25px;
+    align-self: center;
+    align-items: center;
     grid-template-columns:1fr;
     grid-column-gap: 10px;
     grid-row-gap: 8px;
@@ -428,7 +430,7 @@
     margin-top: 150px;
     margin-bottom: 100px;
     width: 328px;
-    margin-left: -95px;
+    margin-left: auto;
 }
 
 }
@@ -478,6 +480,15 @@
 
 
 @media screen and (max-width: 1085px) {
+    .layout{
+        padding: 0 0;
+    }
+    .team__img{
+        width: 90%;
+    }
+    .check{
+        width: 90%;
+    }
 .project__content{
     flex-direction: column;
     justify-content: center;
@@ -522,7 +533,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 340px;
     width: 100%;
     }
     .meaning__text {
@@ -582,10 +592,21 @@
     }
     .meaning__card__box {
         display: grid;
-        margin-left: 25px;
+        align-self: center;
+        align-items: center;
         grid-template-columns:1fr;
         grid-column-gap: 10px;
         grid-row-gap: 8px;
         margin-bottom: 90px;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .project__content-text{
+        margin-left: 30px;
+    }
+    .project__img{
+        width: 350px;
+        margin-left: -30px;
     }
 }
