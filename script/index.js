@@ -95,8 +95,8 @@ formElement.addEventListener('submit', formSubmitHandler)
 formElement.addEventListener('submit', function () {
     const title = document.querySelector('.popup__input_name').value
     const text = document.querySelector('.popup__input_text').value
-
     createCard(title, text)
+
 })
 
 
