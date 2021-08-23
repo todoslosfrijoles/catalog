@@ -82,10 +82,12 @@ function createCard (titleValue, textValue, urlValue) {
     })
 
     document.querySelector('.popup__form').reset()
+    
 }
 
 const formElement= document.querySelector(".popup__content")
 formElement.addEventListener('submit', formSubmitHandler)
+
 formElement.addEventListener('submit', function () {
     const title = document.querySelector('.popup__input_name').value
     const text = document.querySelector('.popup__input_text').value
