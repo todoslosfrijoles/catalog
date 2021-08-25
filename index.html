@@ -28,61 +28,38 @@
            </nav>
        </header>
        <div>
-           <ul class="section">
+           <ul class="cards__list">
               
            </ul>
        </div>
        <div class="popup">
            <div class="popup__content">
                <div class="popup__content_header">
-                   <h3 class="popup__content_title">Добавить комикс</h3>
+                   <h3 class="popup__title">Добавить комикс</h3>
                    <button class="popup__button_close"></button>
                </div>
                <div class="popup__content_body">
                    <img class="popup__link" src="images/link.svg">
                    <form class="popup__form">
-                       <input placeholder="Ссылка на обложку" type="url" class="popup__input popup__input_url">
-                       <input placeholder="Заголовок" class="popup__input popup__input_name">
-                       <input placeholder="Описание комикса" class="popup__input popup__input_text">
+                       <input placeholder="Ссылка на обложку" type="url" class="popup__input popup__input_type_url">
+                       <input placeholder="Заголовок" type="text" class="popup__input popup__input_type_card-name">
+                       <input placeholder="Описание комикса" type="text" class="popup__input popup__input_type_text">
                        <button class="popup__button_post">Добавить</button>
                    </form>
                </div>
            </div>
        </div>
-       <!-- <div class="trash__popup">
-           <div class="trash__popup_content">
-               <h3 class="trash__popup_title">Удалить?</h3>
-               <div class="trash__popup_footer">
-                   <button class="trash__popup_button"></button>
-                   <button class="trash__popup_button"></button>
-               </div>
-           </div>
-       </div> -->
    </div>
- 
-   <template id='card__template_hardcode'>
-       <li class="card">
-           <img class="card__image" src="./images/image4.jpg" alt="${cardData[i].name}">
-           <div class="card__block">
-               <h2 class="card__title"></h2>
-               <p class="card__text"></p>
-               <div class="card__footer">
-                   <button class="trash__hardcode"></button>
-                   <button class="card__button_hardcode"></button>
-               </div>
-           </div>
-       </li>
-   </template>
- 
+  
    <template id='card__template'>
-       <li class="card">
+       <li class="card__item card">
            <img class="card__image" src="" alt="Image">
            <div class="card__block">
                <h2 class="card__title"></h2>
                <p class="card__text"></p>
                <div class="card__footer">
-                   <button class="trash"></button>
-                   <button class="card__button"></button>
+                   <button class="card__delete-button"></button>
+                   <button class="card__like-button"></button>
                </div>
            </div>
        </li>

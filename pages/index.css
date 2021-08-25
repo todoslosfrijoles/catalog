@@ -159,7 +159,7 @@
     margin-top: 6px;
 }
 
-.trash {
+.card__delete-button {
     background-image: url(../images/trash.svg);
     width: 18px;
     height: 20px;
@@ -177,7 +177,7 @@
     align-self: center;
 }
 
-.card__button {
+.card__like-button {
     background-image: url(../images/heart1.svg);
     width: 20px;
     height: 17px;
@@ -187,28 +187,7 @@
     align-self: center;
 }
 
-.card__button_active {
-    background-image: url(../images/Heart.svg);
-    background-position: center;
-    width: 20px;
-    height: 17px;
-    background-repeat: no-repeat;
-    border-width: 0;
-    background-color: rgb(255, 255, 255);
-    align-self: center;
-}
-
-.card__button_hardcode {
-    background-image: url(../images/heart1.svg);
-    width: 20px;
-    height: 17px;
-    background-repeat: no-repeat;
-    border-width: 0;
-    background-color: rgb(255, 255, 255);
-    align-self: center;
-}
-
-.card__button_hardcode_active {
+.card__like-button_is-active {
     background-image: url(../images/Heart.svg);
     background-position: center;
     width: 20px;
@@ -225,16 +204,30 @@
 }
 
 .popup {
-    top: 0;
     left: 0;
+    bottom: 0;
+    right: 0;
     position: fixed;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    display: none;
-    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
     align-items: center;
+    transition: visibility 0s 0.6s, opacity 0.6s;
+    z-index: 10;
 }
+
+.popup_is-opened {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: all;
+    /* When opening, make the visibility change immediate with no delay */
+    transition: visibility 0s, opacity 0.6s;
+}
+  
 
 .popup__content {
     width: 544px;
@@ -256,7 +249,7 @@
     margin-bottom: 12px;
 }
 
-.popup__content_title {
+.popup__title {
     padding: 0;
     margin: 0;
     font-size: 24px;
