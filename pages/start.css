@@ -19,6 +19,9 @@
 * {
     font-family: 'VisueltPro';
 }
+A {
+    text-decoration: none; /* Убирает подчеркивание для ссылок */
+   } 
 .layout {
     padding: 0 120px; 
 }
