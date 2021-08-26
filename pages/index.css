@@ -41,10 +41,6 @@
     position: sticky;
     top: 0;
     background-color: #fff;
-    background-image: url(../images/tochki2.svg);
-    background-repeat: no-repeat;
-    background-size: 875px 900px;
-    background-position: -30px -550px;
 }
 
 .header__block {
@@ -99,7 +95,7 @@
     cursor: pointer;
 }
 
-.section {
+.cards__list {
     background-color: rgb(255, 255, 255);
     height: 100%;
     /*display: grid;
@@ -208,6 +204,8 @@
     bottom: 0;
     right: 0;
     position: fixed;
+    display: flex;
+    justify-content: center;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
@@ -418,7 +416,7 @@
 }
 
 @media screen and (max-width: 675px) {
-    .section {
+    .cards__list {
         display: flex;
         flex-direction: column;
         align-items: center;
